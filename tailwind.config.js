@@ -34,6 +34,7 @@ module.exports = {
         },
         yellow: "#e0af68",
         green: "#9ece6a",
+        pink: "#bb9af7",
       },
       typography: ({ theme }) => ({
         tokyonight: {
