@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A simple Arch Linux respin by ACuteWoof."
+    />
+    <meta name="author" content="Vithushan Sutharsan (ACuteWoof)" />
+    <link rel="icon" type="image/png" href="https://github.com/woof-os.png" />
+    <title>Woof OS</title>
+
+    <!--<link rel="stylesheet" href="tailwind.css" />-->
+    <link rel="stylesheet" href="./tailwind.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Major+Mono+Display&display=swap"
+      rel="stylesheet"
+    />
+    <script defer>
+      function sendmessage() {
+        message = document.getElementById("themessage").value;
+        const xhr = new XMLHttpRequest();
+        try {
+          xhr.open(
+            "GET",
+            "https://www.lewoof.xyz/api/index?message=`[sent from os.lewoof.xyz]`: " +
+              message,
+          );
+          xhr.send();
+          xhr.responseType = "json";
+          xhr.onload = () => {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+              const data = xhr.response;
+              document.getElementById("themessage").value = "";
+              document.getElementById("sendbutton").innerHTML =
+                "Message sent :)";
+              console.log(data);
+            } else {
+              console.log(`Error: ${xhr.status}`);
+              document.getElementById("sendbutton").innerHTML =
+                "Couldn't send message :/";
+            }
+          };
+        } catch (e) {
+          console.error(e);
+          document.getElementById("sendbutton").innerHTML =
+            "Couldn't send message :/";
+        }
+      }
+    </script>
+  </head>
+  <body
+    class="text-wrap flex flex-col gap-16 dark m-0 min-h-screen bg-mirage-950 p-8 lg:p-12 xl:px-32 text-periwinkle-200 font-mono"
+  >
+    <section id="hero" class="w-full flex flex-col items-center justify-center">
+      <h1 class="font-display text-5xl text-center lg:text-7xl text-yellow">Woof os</h1>
+    </section>
+    <nav
+      class="items-center prose prose-tokyonight !max-w-full flex gap-4 justify-center"
+    >
+      <a href="qtile">Qtile</a>
+      <a href="sway">Sway</a>
+      <span class="text-yellow/50">·</span>
+      <a href="pacman">Pacman Repository</a>
+    </nav>
+    <section id="content" class="w-full">
+      <div class="prose prose-tokyonight prose-invert !max-w-full">
+        <p>
+          Woof OS is a simple respin of Arch Linux with a focus on simplicity
+          and speed. The main focus was to recreate my personal setup (only
+          applies to the Qtile edition) in a way that is easy for install and
+          get up and running quickly. The distro is designed to be a daily
+          driver for those who want a system close to Arch Linux without the
+          hassle of setting up everything from scratch.
+        </p>
+        <p>
+          The configuration files and any packages outside the Arch Linux
+          repositories used in Woof OS are also available to install through our
+          pacman repository. You can find the repository information on the
+          <a target="_self" href="pacman">Pacman Repository</a> page.
+        </p>
+        <h2>Editions</h2>
+        <ul>
+          <li><a href="qtile">Qtile</a></li>
+          <li><a href="sway">Sway</a></li>
+        </ul>
+        <p>
+          Woof OS Sway edition is now available thanks to
+          <a target="_blank" href="https://github.com/akirapearl">Akirapearl</a
+          >.
+        </p>
+        <p>
+          If you would like to contribute to the project for me to release more
+          editions, you can
+          <a target="_self" href="#contact">get in touch with me</a>, or
+          <a target="_self" href="#donate">donate</a> to the project
+          (information at the bottom of the page).
+        </p>
+        <img alt="Woof OS" src="images/main.png" />
+      </div>
+    </section>
+    <footer id="footer" class="border-t border-periwinkle-200">
+      <div
+        class="text-wrap break-all prose prose-tokyonight w-screen md:grid md:grid-cols-2 !max-w-full"
+      >
+        <section id="contact">
+          <h2>Contact</h2>
+          <ul>
+            <li>
+              Email:&nbsp;<a
+                target="_blank"
+                href="mailto:sutharshanvithushan@gmail.com"
+                >sutharshanvithushan@gmail.com</a
+              >
+            </li>
+            <li>
+              Discord:&nbsp;<a
+                target="_blank"
+                href="https://discord.gg/2G2yGUAXUS"
+                >Woof OS</a
+              >
+            </li>
+          </ul>
+          <div class="flex flex-col gap-2">
+            <textarea
+              maxlength="2000"
+              class="flex min-h-[60px] w-full border border-mirage-800 bg-transparent px-3 py-2 text-base shadow-sm placeholder:text-mirage-500 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-mirage-500 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+              id="themessage"
+              placeholder="Leave a message"
+            ></textarea>
+            <button
+              class="border border-mirage-800 inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-transparent text-neutral-800-foreground shadow hover:bg-mirage-800/90 h-9 px-4 py-2"
+              id="sendbutton"
+              onclick="sendmessage()"
+            >
+              Send :&gt;
+            </button>
+          </div>
+        </section>
+        <section id="donate">
+          <h2>Donate</h2>
+          <ul>
+            <li>
+              <strong>Solana: </strong
+              ><span class="text-wrap break-all"
+                >6BecuGmLuD7JJEbQuV7mNqUNZ3i8WPxNC5zL63oAhRJH</span
+              >
+            </li>
+            <li>
+              <strong>BuyMeACoffee: </strong
+              ><a target="_blank" href="https://buymeacoffee.com/acutewoof"
+                >acutewoof</a
+              >
+            </li>
+          </ul>
+        </section>
+      </div>
+      <div
+        class="mt-6 md:flex md:items-center md:justify-between text-periwinkle-200"
+      >
+        <span class="sm:text-center"
+          >© 2023-2024 Vithushan. All Rights Reserved.</span
+        ><span class="prose prose-tokyonight flex gap-6"
+          ><a target="_blank" href="https://lewoof.xyz">Vithushan (ACuteWoof)</a
+          ><a target="_blank" href="https://github.com/woof-os">Github</a></span
+        >
+      </div>
+    </footer>
+  </body>
+</html>

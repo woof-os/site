@@ -1,0 +1,19 @@
+{
+  "name": "woof-os-site",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/woof-os/site.git",
+  "author": "Vithushan <sutharshanvithushan@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "tailwindcss build -i ./src/tailwind.css -o ./tailwind.css",
+    "build": "NODE_ENV=production yarn dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@tailwindcss/typography": "^0.5.15",
+    "autoprefixer": "^10.4.20",
+    "prettier": "^3.4.1",
+    "tailwindcss": "^3.4.15"
+  }
+}

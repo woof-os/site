@@ -1,0 +1,68 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["*.html", "./**/*.html"],
+  theme: {
+    extend: {
+      colors: {
+        black: "#414868",
+        white: "#a9b1d6",
+        mirage: {
+          50: "#f6f6f9",
+          100: "#ebecf3",
+          200: "#d4d6e3",
+          300: "#aeb3cb",
+          400: "#828aae",
+          500: "#626b95",
+          600: "#4d547c",
+          700: "#404464",
+          800: "#373b55",
+          900: "#323548",
+          950: "#1a1b26",
+        },
+        periwinkle: {
+          50: "#f0f3fd",
+          100: "#e4e9fb",
+          200: "#c0caf5",
+          300: "#b0baf1",
+          400: "#9097e9",
+          500: "#7576df",
+          600: "#615ad1",
+          700: "#534ab8",
+          800: "#453e95",
+          900: "#3c3877",
+          950: "#232145",
+        },
+        yellow: "#e0af68",
+        green: "#9ece6a",
+      },
+      typography: ({ theme }) => ({
+        tokyonight: {
+          css: {
+            "--tw-prose-body": theme("colors.periwinkle[200]"),
+            "--tw-prose-headings": theme("colors.yellow"),
+            "--tw-prose-lead": theme("colors.periwinkle[300]"),
+            "--tw-prose-links": theme("colors.green"),
+            "--tw-prose-bold": theme("colors.yellow"),
+            "--tw-prose-counters": theme("colors.periwinkle[400]"),
+            "--tw-prose-bullets": theme("colors.periwinkle[600]"),
+            "--tw-prose-hr": theme("colors.periwinkle[700]"),
+            "--tw-prose-quotes": theme("colors.periwinkle[100]"),
+            "--tw-prose-quote-borders": theme("colors.periwinkle[700]"),
+            "--tw-prose-captions": theme("colors.periwinkle[400]"),
+            "--tw-prose-code": theme("colors.yellow"),
+            "--tw-prose-pre-code": theme("colors.periwinkle[300]"),
+            "--tw-prose-pre-bg": "rgb(0 0 0 / 50%)",
+            "--tw-prose-th-borders": theme("colors.periwinkle[600]"),
+            "--tw-prose-td-borders": theme("colors.periwinkle[700]"),
+          },
+        },
+      }),
+    },
+    fontFamily: {
+      serif: ["IBM Plex Serif", "ui-serif", "Georgia", "serif"],
+      mono: ["IBM Plex Mono", "ui-monospace", "SFMono-Regular"],
+      display: ["Major Mono Display", "serif"],
+    },
+  },
+  plugins: [require("@tailwindcss/typography")],
+};
