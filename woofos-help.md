@@ -84,7 +84,7 @@ The following commands are run in the terminal.
 * `sudo pacman -Rs name-of-package` uninstalls the specified package and its dependencies
    unused by other packages on the system.
 
-* `sudo pacman -syu` upgrades all installed packages on the system.
+* `sudo pacman -Syu` upgrades all installed packages on the system.
 
 Users are expected to follow the guidance in the System maintenance#Upgrading the system
 section of the ArchWiki to upgrade their systems regularly and not blindly run the
@@ -100,10 +100,10 @@ For more info on Arch Linux which WoofOS is built on, check out the ArchWiki:
 
 ### Contact for WoofOS
 * Email: sutharshanvithushan@gmail.com
-* Matrix: #woof-os:mx.lewoof.xyz | @acutewoof:mx.lewoof.xyz
-* Discord: [https://discord.gg/2G2yGUAXUS](Woof OS)
+* Discord: [Woof OS](https://discord.gg/2G2yGUAXUS)
 
 ### Donate
 * Monero: 
 88Ftpu3ncRyLv7Z2c14b9L4MsyWscEqLBJhENxviYtmtRfidDx6G9y3Xyd8aYF8NRV2c2dF5QZiyTfHwuWLH9qmsSpskLhj
-* BuyMeACoffee: [https://buymeacoffee.com/acutewoof](acutewoof)
+* Solana: 6BecuGmLuD7JJEbQuV7mNqUNZ3i8WPxNC5zL63oAhRJH
+* BuyMeACoffee: [acutewoof](https://buymeacoffee.com/acutewoof)
