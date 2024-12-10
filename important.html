@@ -54,7 +54,7 @@
   >
     <section id="hero" class="w-full flex flex-col items-center justify-center">
       <h1 class="text-center font-display text-5xl lg:text-7xl text-yellow">
-        Woof os pacman repository
+        Woof os: note on installation
       </h1>
     </section>
     <nav
@@ -65,27 +65,53 @@
       <a href="qtile">Qtile</a>
       <a href="sway">Sway</a>
       <span class="text-yellow/50">·</span>
-      <a href="pacman" class="!text-pink">Pacman Repository</a>
+      <a href="pacman">Pacman Repository</a>
       <span class="text-yellow/50">·</span>
-      <a class="!text-red-400 !hover:bg-red-500" href="important">Important Note</a>
+      <a
+        class="!text-red-400 !hover:bg-red-500 !decoration-pink"
+        href="important"
+        >Important Note</a
+      >
     </nav>
     <section id="content" class="w-full">
       <div class="prose prose-tokyonight prose-invert !max-w-full">
         <article>
           <div>
+            <p>Sometimes, during installation you may encounter this error:</p>
+
+            <pre>
+              <code>
+                The source file system
+                &quot;/run/archiso/bootmnt/arch/x86_64/airoootfs.sfs&quot; does
+                not exist
+              </code>
+            </pre>
+
             <p>
-              This pacman repository is used to distribute packages needed for
-              Woof OS, including configuration files, that are not available in
-              the Arch Linux repositories.
+              This just means that the USB/CD you booted form isn&#39;t mounted
+              to <code>bootmnt</code>.
             </p>
+
+            <p>To proceed with the installation:</p>
+
+            <ol>
+              <li>Run <code>lsblk</code> to list all your block devices.</li>
+              <li>
+                Find the partition of your USB/CD that contains the Woof OS live
+                image.
+              </li>
+              <li>Mount the device to <code>/run/archiso/bootmnt</code>.</li>
+              <li>
+                Run <code>calamares</code> to start the installer and proceed
+                with the installation as usual.
+              </li>
+            </ol>
+
             <p>
-              To use the repository, add the following to your
-              <code>/etc/pacman.conf</code>:
+              If any issues persist, contact us on
+              <a href="https://discord.gg/2G2yGUAXUS">Discord</a> or send a
+              message from the footer, and tell us how we can contact you.
             </p>
-            <pre>[woof-pacman-repo]<br>SigLevel = Optional TrustAll<br>Server = https://repo.os.lewoof.xyz/$arch<br>Server = https://woof-os.github.io/$repo/$arch</pre>
-            <a target="_blank" href="https://repo.os.lewoof.xyz/"
-              >Browse the repository</a
-            >
           </div>
         </article>
       </div>
