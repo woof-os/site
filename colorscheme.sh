@@ -5,7 +5,14 @@
 CURRENTTHEME=$1
 NEWTHEME=$2
 
-echo "NOTE: This script assumes that you're using the default Woof OS configuration files, and that you have downloaded your preferred colorscheme to the correct directories."
+echo "
+NOTE: This script assumes that you're using the default Woof OS configuration
+files, and that you have downloaded your preferred colorscheme to the correct
+directories."
+
+echo "
+=============================================================================
+"
 
 sed -i "s/$CURRENTTHEME/$NEWTHEME/g" ~/.config/alacritty/alacritty.toml
 sed -i "s/$CURRENTTHEME/$NEWTHEME/g" ~/.config/rofi/config.rasi
