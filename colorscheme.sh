@@ -1,3 +1,5 @@
+#!/bin/sh
+
 CURRENTTHEME=$1
 NEWTHEME=$2
 
