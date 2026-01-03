@@ -49,374 +49,393 @@
       }
     </script>
   </head>
-  <body
-    class="text-wrap flex flex-col gap-16 dark m-0 min-h-screen bg-mirage-950 p-8 lg:p-12 xl:px-32 text-periwinkle-200 font-mono"
-  >
-    <section id="hero" class="w-full flex flex-col items-center justify-center">
-      <h1 class="text-center font-display text-5xl lg:text-7xl text-yellow">
-        Woof os sway
-      </h1>
-    </section>
-    <nav
-      class="items-center prose prose-tokyonight !max-w-full flex gap-4 justify-center"
+  <body class="bg-mirage-900 bg-main bg-fixed p-8 lg:p-12 xl:px-32">
+    <main
+      class="text-wrap flex flex-col gap-16 dark bg-mirage-950/50 backdrop-blur-sm backdrop-brightness-50 text-periwinkle-200 font-mono max-w-screen-md mx-auto px-8 py-12"
     >
-      <a href="/">Home</a>
-      <span class="text-yellow/50">·</span>
-      <a href="qtile">Qtile</a>
-      <a href="sway" class="!text-pink">Sway</a>
-      <span class="text-yellow/50">·</span>
-      <a href="pacman">Pacman Repository</a>
-      <span class="text-yellow/50">·</span>
-      <a class="!text-red-400 !hover:bg-red-500" href="important"
-        >Important Note</a
+      <section
+        id="hero"
+        class="w-full flex flex-col items-center justify-center"
       >
-    </nav>
-    <section id="content" class="w-full">
-      <div class="prose prose-tokyonight prose-invert !max-w-full">
-        <div class="flex flex-col gap-8">
-          <article>
-            <div class="flex gap-4 mb-12">
-              <a target="_self" href="#download">Download</a
-              ><a target="_self" href="#keybinds">Keybinds</a
-              ><a target="_self" href="#configs">Configs</a>
-            </div>
-            <section id="download">
-              <h1>Download</h1>
-              <span class="flex flex-col gap-2 md:flex-row md:gap-12"
-                ><span
-                  ><h2>LeWoof Mirror</h2>
-                  <a
-                    target="_blank"
-                    href="https://dl.os.lewoof.xyz/sway/woofos-sway-x86_64.iso"
-                    >Latest release</a
-                  ><br /><a
-                    target="_blank"
-                    href="https://dl.os.lewoof.xyz/sway/"
-                    >Browse downloads</a
-                  ></span
-                ><span
-                  ><h2>Github Mirror</h2>
-                  <a
-                    target="_blank"
-                    href="https://github.com/woof-os/isos-sway/releases/latest/download/woofos-sway.iso"
-                    >Latest release</a
-                  ><br /><a
-                    target="_blank"
-                    href="https://github.com/woof-os/isos-sway/releases"
-                    >Browse downloads</a
-                  ></span
-                ></span
-              >
-            </section>
-            <hr />
-            <section id="keybinds">
-              <h1>Keybinds for Woof OS Sway edition</h1>
-              <p>
-                Woof OS Sway edition uses a tiling window manager, sway, mainly
-                controlled using the keyboard.<br />
-                The keybinds listed here are declared in
-                <code>~/.config/sway/config</code>. Also note that the
-                <kbd>Caps Lock</kbd> key is swapped with <kbd>Escape</kbd>
-                because no one uses Caps Lock, and Escape is more useful for the
-                intended workflow in Woof OS.
-              </p>
-              By default, <kbd>[mod]</kbd> is the <kbd>Super</kbd>/<kbd
-                >mod4</kbd
-              >
-              key, which is the <kbd>⊞ Win</kbd> key on most keyboards, and the
-              <kbd>⌘ Command</kbd> key on Macs.
-              <div class="md:grid md:grid-cols-2 md:gap-12 mt-8">
-                <div>
-                  <h2>Focus navigation</h2>
-                  <ul>
-                    <li>
-                      <kbd>[mod]</kbd> <kbd>H</kbd> moves focus to the
-                      <b>left</b>
-                    </li>
-                    <li>
-                      <kbd>[mod]</kbd> <kbd>L</kbd> moves focus to the
-                      <b>right</b>
-                    </li>
-                    <li>
-                      <kbd>[mod]</kbd> <kbd>J</kbd> moves focus <b>down</b>
-                    </li>
-                    <li><kbd>[mod]</kbd> <kbd>K</kbd> moves focus <b>up</b></li>
-                    <li>
-                      <kbd>[mod]</kbd> <kbd>Space</kbd> toggles focus between
-                      the floating area and the tiling area
-                    </li>
-                    <p>
-                      The mouse can also be used to switch focus between windows
-                      by simply hovering over them.
-                    </p>
-                    <li>
-                      <kbd>[mod]</kbd>
-                      <span
-                        ><span><kbd>1</kbd>/</span><span><kbd>2</kbd>/</span
-                        ><span><kbd>3</kbd>/</span><span><kbd>4</kbd>/</span
-                        ><span><kbd>5</kbd>/</span><span><kbd>6</kbd>/</span
-                        ><span><kbd>7</kbd>/</span><span><kbd>8</kbd>/</span
-                        ><span><kbd>9</kbd></span></span
-                      >
-                      moves focus to the workspace assigned to the ID
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h2>Window arrangement</h2>
-                  <ul>
-                    <li>
-                      <kbd>[mod]</kbd> <kbd>Shift</kbd> <kbd>H</kbd> moves
-                      focused window to the <b>left</b>
-                    </li>
-                    <li>
-                      <kbd>[mod]</kbd> <kbd>Shift</kbd> <kbd>L</kbd> moves
-                      focused window to the <b>right</b>
-                    </li>
-                    <li>
-                      <kbd>[mod]</kbd> <kbd>Shift</kbd> <kbd>J</kbd> moves
-                      focused window <b>down</b>
-                    </li>
-                    <li>
-                      <kbd>[mod]</kbd> <kbd>Shift</kbd> <kbd>K</kbd> moves
-                      focused window <b>up</b>
-                    </li>
-                    <li>
-                      <kbd>[mod]</kbd> <kbd>Shift</kbd>
-                      <kbd>Return</kbd> toggles between split and unsplit sides
-                      of stack
-                    </li>
-                    <li>
-                      <kbd>[mod]</kbd> <kbd>Tab</kbd> toggles between layouts
-                    </li>
-                    <li>
-                      <kbd>[mod]</kbd> <kbd>Shift</kbd>
-                      <span
-                        ><span><kbd>1</kbd>/</span><span><kbd>2</kbd>/</span
-                        ><span><kbd>3</kbd>/</span><span><kbd>4</kbd>/</span
-                        ><span><kbd>5</kbd>/</span><span><kbd>6</kbd>/</span
-                        ><span><kbd>7</kbd>/</span><span><kbd>8</kbd>/</span
-                        ><span><kbd>9</kbd></span></span
-                      >
-                      shifts focused window to the workspace assigned to the ID
-                    </li>
-                    <li>
-                      To resize windows, enter resizing mode by pressing
-                      <kbd>[mod]</kbd> <kbd>R</kbd> and use the arrow keys or
-                      the relevant vim navigation keys to resize the window.<br /><kbd
-                        >Return</kbd
-                      >
-                      or <kbd>Escape</kbd> exits resize mode.
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h2>Layouts</h2>
-                  <ul>
-                    <li>
-                      <kbd>[mod]</kbd> <kbd>R</kbd> for horizontal splitting
-                    </li>
-                    <li>
-                      <kbd>[mod]</kbd> <kbd>V</kbd> for vertical splitting
-                    </li>
-                    <li><kbd>[mod]</kbd> <kbd>S</kbd> for stacking layout</li>
-                    <li><kbd>[mod]</kbd> <kbd>W</kbd> for tabbed layout</li>
-                    <li>
-                      <kbd>[mod]</kbd> <kbd>E</kbd> for toggle split layout
-                    </li>
-                    <li><kbd>[mod]</kbd> <kbd>F</kbd> for fullscreen layout</li>
-                    <li>
-                      <kbd>[mod]</kbd> <kbd>Shift</kbd> <kbd>Space</kbd> toggles
-                      floating mode
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h2>Miscellaneous and scratchpad</h2>
-                  <ul>
-                    <li>
-                      <kbd>[mod]</kbd> <kbd>Shift</kbd> <kbd>-</kbd> moves
-                      focused window to the scratchpad
-                    </li>
-                    <li>
-                      <kbd>[mod]</kbd> <kbd>-</kbd> shows the next scratchpad
-                      window or hides the focused scratchpad window
-                    </li>
-                    <li>
-                      <kbd>[mod]</kbd> <kbd>Return</kbd> launches the terminal
-                      (alacritty)
-                    </li>
-                    <li>
-                      <kbd>[mod]</kbd> <kbd>D</kbd> opens the Rofi run launcher
-                    </li>
-                    <li><kbd>[mod]</kbd> <kbd>Q</kbd> kills focused window</li>
-                    <li>
-                      <kbd>[mod]</kbd> <kbd>CTRL</kbd> <kbd>C</kbd> refreshes
-                      Sway
-                    </li>
-                    <li>
-                      <kbd>[mod]</kbd> <kbd>CTRL</kbd> <kbd>Q</kbd> shuts down
-                      Sway
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </section>
-            <hr />
-            <section id="configs">
-              <h2>Configs</h2>
-              <ul class="md:grid md:grid-cols-2 __className_62325b">
-                <li>
-                  <a
-                    target="_blank"
-                    href="https://github.com/woof-os/iso-profile-sway"
-                    >archiso profile</a
-                  >
-                </li>
-                <li>
-                  <a
-                    target="_blank"
-                    href="https://github.com/woof-os/sway-waybar-akirapearl"
-                    >sway &amp; waybar</a
-                  >
-                </li>
-                <li>
-                  <a target="_blank" href="https://github.com/woof-os/rofi"
-                    >rofi</a
-                  >
-                </li>
-                <li>
-                  <a target="_blank" href="https://github.com/woof-os/dunst"
-                    >dunst</a
-                  >
-                </li>
-                <li>
-                  <a
-                    target="_blank"
-                    href="https://github.com/woof-os/calamares-sway"
-                    >calamares</a
-                  >
-                </li>
-                <li>
-                  <a target="_blank" href="https://github.com/woof-os/alacritty"
-                    >alacritty</a
-                  >
-                </li>
-                <li>
-                  <a target="_blank" href="https://github.com/woof-os/starship"
-                    >starship</a
-                  >
-                </li>
-                <li>
-                  <a
-                    target="_blank"
-                    href="https://github.com/woof-os/tokyo-night-sddm"
-                    >sddm</a
-                  >
-                </li>
-                <li>
-                  <a target="_blank" href="https://github.com/woof-os/qt5"
-                    >qt5</a
-                  >
-                </li>
-                <li>
-                  <a target="_blank" href="https://github.com/woof-os/zshrc"
-                    >zsh</a
-                  >
-                </li>
-                <li>
-                  <a
-                    target="_blank"
-                    href="https://github.com/woof-os/tokyonight-gtk"
-                    >gtk theme</a
-                  >
-                </li>
-                <li>
-                  <a
-                    target="_blank"
-                    href="https://github.com/woof-os/icon-config"
-                    >icons</a
-                  >
-                </li>
-                <li>
-                  <a
-                    target="_blank"
-                    href="https://github.com/woof-os/wallpapers"
-                    >wallpapers</a
-                  >
-                </li>
-              </ul>
-            </section>
-          </article>
-        </div>
-      </div>
-    </section>
-    <footer id="footer" class="border-t border-periwinkle-200">
-      <div
-        class="text-wrap break-all prose prose-tokyonight w-screen md:grid md:grid-cols-2 !max-w-full"
+        <h1 class="text-center font-display text-5xl lg:text-7xl text-yellow">
+          Woof os sway
+        </h1>
+      </section>
+      <nav
+        class="items-center prose prose-tokyonight !max-w-full flex gap-4 justify-center"
       >
-        <section id="contact">
-          <h2>Contact</h2>
-          <ul>
-            <li>
-              Email:&nbsp;<a
-                target="_blank"
-                href="mailto:sutharshanvithushan@gmail.com"
-                >sutharshanvithushan@gmail.com</a
-              >
-            </li>
-            <li>
-              Discord:&nbsp;<a
-                target="_blank"
-                href="https://discord.gg/2G2yGUAXUS"
-                >Woof OS</a
-              >
-            </li>
-          </ul>
-          <div class="flex flex-col gap-2">
-            <textarea
-              maxlength="2000"
-              class="flex min-h-[60px] w-full border border-mirage-800 bg-transparent px-3 py-2 text-base shadow-sm placeholder:text-mirage-500 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-mirage-500 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
-              id="themessage"
-              placeholder="Leave a message"
-            ></textarea>
-            <button
-              class="border border-mirage-800 inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-transparent text-neutral-800-foreground shadow hover:bg-mirage-800/90 h-9 px-4 py-2"
-              id="sendbutton"
-              onclick="sendmessage()"
-            >
-              Send :&gt;
-            </button>
-          </div>
-        </section>
-        <section id="donate">
-          <h2>Donate</h2>
-          <ul>
-            <li>
-              <strong>Solana: </strong
-              ><span class="text-wrap break-all"
-                >JDkK2kpBmPm6YyYnLYNHpw8FhKyZ9AQ2CQTqj6BQxFKY</span
-              >
-            </li>
-            <li>
-              <strong>BuyMeACoffee: </strong
-              ><a target="_blank" href="https://buymeacoffee.com/acutewoof"
-                >acutewoof</a
-              >
-            </li>
-          </ul>
-        </section>
-      </div>
-      <div
-        class="mt-6 md:flex md:items-center md:justify-between text-periwinkle-200"
-      >
-        <span class="sm:text-center"
-          >© 2023-2025 Vithushan. All Rights Reserved.</span
-        ><span class="prose prose-tokyonight flex gap-6"
-          ><a target="_blank" href="https://lewoof.xyz">Vithushan (ACuteWoof)</a
-          ><a target="_blank" href="https://github.com/woof-os">Github</a></span
+        <a href="/">Home</a>
+        <span class="text-yellow/50">·</span>
+        <a href="qtile">Qtile</a>
+        <a href="sway" class="!text-pink">Sway</a>
+        <span class="text-yellow/50">·</span>
+        <a href="pacman">Pacman Repository</a>
+        <span class="text-yellow/50">·</span>
+        <a class="!text-red-400 !hover:bg-red-500" href="important"
+          >Important Note</a
         >
-      </div>
-    </footer>
+      </nav>
+      <section id="content" class="w-full">
+        <div class="prose prose-tokyonight prose-invert !max-w-full">
+          <div class="flex flex-col gap-8">
+            <article>
+              <div class="flex gap-4 mb-12">
+                <a target="_self" href="#download">Download</a
+                ><a target="_self" href="#keybinds">Keybinds</a
+                ><a target="_self" href="#configs">Configs</a>
+              </div>
+              <section id="download">
+                <h1>Download</h1>
+                <span class="flex flex-col gap-2 md:flex-row md:gap-12"
+                  ><span
+                    ><h2>LeWoof Mirror</h2>
+                    <a
+                      target="_blank"
+                      href="https://dl.os.lewoof.xyz/sway/woofos-sway-x86_64.iso"
+                      >Latest release</a
+                    ><br /><a
+                      target="_blank"
+                      href="https://dl.os.lewoof.xyz/sway/"
+                      >Browse downloads</a
+                    ></span
+                  ><span
+                    ><h2>Github Mirror</h2>
+                    <a
+                      target="_blank"
+                      href="https://github.com/woof-os/isos-sway/releases/latest/download/woofos-sway.iso"
+                      >Latest release</a
+                    ><br /><a
+                      target="_blank"
+                      href="https://github.com/woof-os/isos-sway/releases"
+                      >Browse downloads</a
+                    ></span
+                  ></span
+                >
+              </section>
+              <hr />
+              <section id="keybinds">
+                <h1>Keybinds for Woof OS Sway edition</h1>
+                <p>
+                  Woof OS Sway edition uses a tiling window manager, sway,
+                  mainly controlled using the keyboard.<br />
+                  The keybinds listed here are declared in
+                  <code>~/.config/sway/config</code>. Also note that the
+                  <kbd>Caps Lock</kbd> key is swapped with <kbd>Escape</kbd>
+                  because no one uses Caps Lock, and Escape is more useful for
+                  the intended workflow in Woof OS.
+                </p>
+                By default, <kbd>[mod]</kbd> is the <kbd>Super</kbd>/<kbd
+                  >mod4</kbd
+                >
+                key, which is the <kbd>⊞ Win</kbd> key on most keyboards, and
+                the <kbd>⌘ Command</kbd> key on Macs.
+                <div class="md:grid md:grid-cols-2 md:gap-12 mt-8">
+                  <div>
+                    <h2>Focus navigation</h2>
+                    <ul>
+                      <li>
+                        <kbd>[mod]</kbd> <kbd>H</kbd> moves focus to the
+                        <b>left</b>
+                      </li>
+                      <li>
+                        <kbd>[mod]</kbd> <kbd>L</kbd> moves focus to the
+                        <b>right</b>
+                      </li>
+                      <li>
+                        <kbd>[mod]</kbd> <kbd>J</kbd> moves focus <b>down</b>
+                      </li>
+                      <li>
+                        <kbd>[mod]</kbd> <kbd>K</kbd> moves focus <b>up</b>
+                      </li>
+                      <li>
+                        <kbd>[mod]</kbd> <kbd>Space</kbd> toggles focus between
+                        the floating area and the tiling area
+                      </li>
+                      <p>
+                        The mouse can also be used to switch focus between
+                        windows by simply hovering over them.
+                      </p>
+                      <li>
+                        <kbd>[mod]</kbd>
+                        <span
+                          ><span><kbd>1</kbd>/</span><span><kbd>2</kbd>/</span
+                          ><span><kbd>3</kbd>/</span><span><kbd>4</kbd>/</span
+                          ><span><kbd>5</kbd>/</span><span><kbd>6</kbd>/</span
+                          ><span><kbd>7</kbd>/</span><span><kbd>8</kbd>/</span
+                          ><span><kbd>9</kbd></span></span
+                        >
+                        moves focus to the workspace assigned to the ID
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h2>Window arrangement</h2>
+                    <ul>
+                      <li>
+                        <kbd>[mod]</kbd> <kbd>Shift</kbd> <kbd>H</kbd> moves
+                        focused window to the <b>left</b>
+                      </li>
+                      <li>
+                        <kbd>[mod]</kbd> <kbd>Shift</kbd> <kbd>L</kbd> moves
+                        focused window to the <b>right</b>
+                      </li>
+                      <li>
+                        <kbd>[mod]</kbd> <kbd>Shift</kbd> <kbd>J</kbd> moves
+                        focused window <b>down</b>
+                      </li>
+                      <li>
+                        <kbd>[mod]</kbd> <kbd>Shift</kbd> <kbd>K</kbd> moves
+                        focused window <b>up</b>
+                      </li>
+                      <li>
+                        <kbd>[mod]</kbd> <kbd>Shift</kbd>
+                        <kbd>Return</kbd> toggles between split and unsplit
+                        sides of stack
+                      </li>
+                      <li>
+                        <kbd>[mod]</kbd> <kbd>Tab</kbd> toggles between layouts
+                      </li>
+                      <li>
+                        <kbd>[mod]</kbd> <kbd>Shift</kbd>
+                        <span
+                          ><span><kbd>1</kbd>/</span><span><kbd>2</kbd>/</span
+                          ><span><kbd>3</kbd>/</span><span><kbd>4</kbd>/</span
+                          ><span><kbd>5</kbd>/</span><span><kbd>6</kbd>/</span
+                          ><span><kbd>7</kbd>/</span><span><kbd>8</kbd>/</span
+                          ><span><kbd>9</kbd></span></span
+                        >
+                        shifts focused window to the workspace assigned to the
+                        ID
+                      </li>
+                      <li>
+                        To resize windows, enter resizing mode by pressing
+                        <kbd>[mod]</kbd> <kbd>R</kbd> and use the arrow keys or
+                        the relevant vim navigation keys to resize the
+                        window.<br /><kbd>Return</kbd> or
+                        <kbd>Escape</kbd> exits resize mode.
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h2>Layouts</h2>
+                    <ul>
+                      <li>
+                        <kbd>[mod]</kbd> <kbd>R</kbd> for horizontal splitting
+                      </li>
+                      <li>
+                        <kbd>[mod]</kbd> <kbd>V</kbd> for vertical splitting
+                      </li>
+                      <li><kbd>[mod]</kbd> <kbd>S</kbd> for stacking layout</li>
+                      <li><kbd>[mod]</kbd> <kbd>W</kbd> for tabbed layout</li>
+                      <li>
+                        <kbd>[mod]</kbd> <kbd>E</kbd> for toggle split layout
+                      </li>
+                      <li>
+                        <kbd>[mod]</kbd> <kbd>F</kbd> for fullscreen layout
+                      </li>
+                      <li>
+                        <kbd>[mod]</kbd> <kbd>Shift</kbd>
+                        <kbd>Space</kbd> toggles floating mode
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h2>Miscellaneous and scratchpad</h2>
+                    <ul>
+                      <li>
+                        <kbd>[mod]</kbd> <kbd>Shift</kbd> <kbd>-</kbd> moves
+                        focused window to the scratchpad
+                      </li>
+                      <li>
+                        <kbd>[mod]</kbd> <kbd>-</kbd> shows the next scratchpad
+                        window or hides the focused scratchpad window
+                      </li>
+                      <li>
+                        <kbd>[mod]</kbd> <kbd>Return</kbd> launches the terminal
+                        (alacritty)
+                      </li>
+                      <li>
+                        <kbd>[mod]</kbd> <kbd>D</kbd> opens the Rofi run
+                        launcher
+                      </li>
+                      <li>
+                        <kbd>[mod]</kbd> <kbd>Q</kbd> kills focused window
+                      </li>
+                      <li>
+                        <kbd>[mod]</kbd> <kbd>CTRL</kbd> <kbd>C</kbd> refreshes
+                        Sway
+                      </li>
+                      <li>
+                        <kbd>[mod]</kbd> <kbd>CTRL</kbd> <kbd>Q</kbd> shuts down
+                        Sway
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+              <hr />
+              <section id="configs">
+                <h2>Configs</h2>
+                <ul class="md:grid md:grid-cols-2 __className_62325b">
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://github.com/woof-os/iso-profile-sway"
+                      >archiso profile</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://github.com/woof-os/sway-waybar-akirapearl"
+                      >sway &amp; waybar</a
+                    >
+                  </li>
+                  <li>
+                    <a target="_blank" href="https://github.com/woof-os/rofi"
+                      >rofi</a
+                    >
+                  </li>
+                  <li>
+                    <a target="_blank" href="https://github.com/woof-os/dunst"
+                      >dunst</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://github.com/woof-os/calamares-sway"
+                      >calamares</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://github.com/woof-os/alacritty"
+                      >alacritty</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://github.com/woof-os/starship"
+                      >starship</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://github.com/woof-os/tokyo-night-sddm"
+                      >sddm</a
+                    >
+                  </li>
+                  <li>
+                    <a target="_blank" href="https://github.com/woof-os/qt5"
+                      >qt5</a
+                    >
+                  </li>
+                  <li>
+                    <a target="_blank" href="https://github.com/woof-os/zshrc"
+                      >zsh</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://github.com/woof-os/tokyonight-gtk"
+                      >gtk theme</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://github.com/woof-os/icon-config"
+                      >icons</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      href="https://github.com/woof-os/wallpapers"
+                      >wallpapers</a
+                    >
+                  </li>
+                </ul>
+              </section>
+            </article>
+          </div>
+        </div>
+      </section>
+      <footer id="footer" class="border-t border-periwinkle-200">
+        <div
+          class="text-wrap break-all prose prose-tokyonight w-screen md:grid md:grid-cols-2 !max-w-full"
+        >
+          <section id="contact">
+            <h2>Contact</h2>
+            <ul>
+              <li>
+                Email:&nbsp;<a
+                  target="_blank"
+                  href="mailto:sutharshanvithushan@gmail.com"
+                  >sutharshanvithushan@gmail.com</a
+                >
+              </li>
+              <li>
+                Discord:&nbsp;<a
+                  target="_blank"
+                  href="https://discord.gg/2G2yGUAXUS"
+                  >Woof OS</a
+                >
+              </li>
+            </ul>
+            <div class="flex flex-col gap-2">
+              <textarea
+                maxlength="2000"
+                class="flex min-h-[60px] w-full border border-mirage-800 bg-transparent px-3 py-2 text-base shadow-sm placeholder:text-mirage-500 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-mirage-500 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+                id="themessage"
+                placeholder="Leave a message"
+              ></textarea>
+              <button
+                class="border border-mirage-800 inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-transparent text-neutral-800-foreground shadow hover:bg-mirage-800/90 h-9 px-4 py-2"
+                id="sendbutton"
+                onclick="sendmessage()"
+              >
+                Send :&gt;
+              </button>
+            </div>
+          </section>
+          <section id="donate">
+            <h2>Donate</h2>
+            <ul>
+              <li>
+                <strong>Solana: </strong
+                ><span class="text-wrap break-all"
+                  >JDkK2kpBmPm6YyYnLYNHpw8FhKyZ9AQ2CQTqj6BQxFKY</span
+                >
+              </li>
+              <li>
+                <strong>BuyMeACoffee: </strong
+                ><a target="_blank" href="https://buymeacoffee.com/acutewoof"
+                  >acutewoof</a
+                >
+              </li>
+            </ul>
+          </section>
+        </div>
+        <div
+          class="mt-6 md:flex md:items-center md:justify-between text-periwinkle-200"
+        >
+          <span class="sm:text-center"
+            >© 2023-2025 Vithushan. All Rights Reserved.</span
+          ><span class="prose prose-tokyonight flex gap-6"
+            ><a target="_blank" href="https://lewoof.xyz"
+              >Vithushan (ACuteWoof)</a
+            ><a target="_blank" href="https://github.com/woof-os"
+              >Github</a
+            ></span
+          >
+        </div>
+      </footer>
+    </main>
   </body>
 </html>

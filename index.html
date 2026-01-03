@@ -52,132 +52,148 @@
       }
     </script>
   </head>
-  <body
-    class="text-wrap flex flex-col gap-16 dark m-0 min-h-screen bg-mirage-950 p-8 lg:p-12 xl:px-32 text-periwinkle-200 font-mono"
-  >
-    <section id="hero" class="w-full flex flex-col items-center justify-center">
-      <h1 class="font-display text-5xl text-center lg:text-7xl text-yellow">
-        Woof os
-      </h1>
-    </section>
-    <nav
-      class="items-center prose prose-tokyonight !max-w-full flex gap-4 justify-center"
+  <body class="bg-mirage-900 bg-main bg-fixed p-8 lg:p-12 xl:px-32">
+    <main
+      class="text-wrap flex flex-col gap-16 dark bg-mirage-950/50 backdrop-blur-sm backdrop-brightness-50  text-periwinkle-200 font-mono max-w-screen-md mx-auto px-8 py-12"
     >
-      <a href="/" class="!text-pink">Home</a>
-      <span class="text-yellow/50">·</span>
-      <a href="qtile">Qtile</a>
-      <a href="sway">Sway</a>
-      <span class="text-yellow/50">·</span>
-      <a href="pacman">Pacman Repository</a>
-      <span class="text-yellow/50">·</span>
-      <a class="!text-red-400 !hover:bg-red-500" href="important">Important Note</a>
-    </nav>
-    <section id="content" class="w-full">
-      <div class="prose prose-tokyonight prose-invert !max-w-full">
-        <p>
-          Woof OS is a simple respin of Arch Linux with a focus on simplicity
-          and speed. The main focus was to recreate my personal setup (only
-          applies to the Qtile edition) in a way that is easy for install and
-          get up and running quickly. The distro is designed to be a daily
-          driver for those who want a system close to Arch Linux without the
-          hassle of setting up everything from scratch.
-        </p>
-        <p>
-          The configuration files and any packages outside the Arch Linux
-          repositories used in Woof OS are also available to install through our
-          pacman repository. You can find the repository information on the
-          <a target="_self" href="pacman">Pacman Repository</a> page.
-        </p>
-        <h2>Editions</h2>
-        <ul>
-          <li><a href="qtile">Qtile</a></li>
-          <li><a href="sway">Sway</a></li>
-        </ul>
-	<p>
-	Woof OS' development is fueled by your contributions. Special thanks to <a target="_blank"
-		href="https://github.com/perseus01">Perseus (yes he's a god)</a> for his fabulous monetary contributions.
-	</p>
-        <p>
-          Woof OS Sway edition is now available thanks to
-          <a target="_blank" href="https://github.com/akirapearl">Akirapearl</a
-          >.
-        </p>
-        <p>
-          If you would like to contribute to the project for me to release more
-          editions, you can
-          <a target="_self" href="#contact">get in touch with me</a>, or
-          <a target="_self" href="#donate">donate</a> to the project
-          (information at the bottom of the page).
-        </p>
-        <img alt="Woof OS" src="images/main.png" />
-      </div>
-    </section>
-    <footer id="footer" class="border-t border-periwinkle-200">
-      <div
-        class="text-wrap break-all prose prose-tokyonight w-screen md:grid md:grid-cols-2 !max-w-full"
+      <section
+        id="hero"
+        class="w-full flex flex-col items-center justify-center"
       >
-        <section id="contact">
-          <h2>Contact</h2>
-          <ul>
-            <li>
-              Email:&nbsp;<a
-                target="_blank"
-                href="mailto:sutharshanvithushan@gmail.com"
-                >sutharshanvithushan@gmail.com</a
-              >
-            </li>
-            <li>
-              Discord:&nbsp;<a
-                target="_blank"
-                href="https://discord.gg/2G2yGUAXUS"
-                >Woof OS</a
-              >
-            </li>
-          </ul>
-          <div class="flex flex-col gap-2">
-            <textarea
-              maxlength="2000"
-              class="flex min-h-[60px] w-full border border-mirage-800 bg-transparent px-3 py-2 text-base shadow-sm placeholder:text-mirage-500 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-mirage-500 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
-              id="themessage"
-              placeholder="Leave a message"
-            ></textarea>
-            <button
-              class="border border-mirage-800 inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-transparent text-neutral-800-foreground shadow hover:bg-mirage-800/90 h-9 px-4 py-2"
-              id="sendbutton"
-              onclick="sendmessage()"
-            >
-              Send :&gt;
-            </button>
-          </div>
-        </section>
-        <section id="donate">
-          <h2>Donate</h2>
-          <ul>
-            <li>
-              <strong>Solana: </strong
-              ><span class="text-wrap break-all"
-                >JDkK2kpBmPm6YyYnLYNHpw8FhKyZ9AQ2CQTqj6BQxFKY</span
-              >
-            </li>
-            <li>
-              <strong>BuyMeACoffee: </strong
-              ><a target="_blank" href="https://buymeacoffee.com/acutewoof"
-                >acutewoof</a
-              >
-            </li>
-          </ul>
-        </section>
-      </div>
-      <div
-        class="mt-6 md:flex md:items-center md:justify-between text-periwinkle-200"
+        <h1 class="font-display text-5xl text-center lg:text-7xl text-yellow">
+          Woof os
+        </h1>
+      </section>
+      <nav
+        class="items-center prose prose-tokyonight !max-w-full flex gap-4 justify-center"
       >
-        <span class="sm:text-center"
-          >© 2023-2025 Vithushan. All Rights Reserved.</span
-        ><span class="prose prose-tokyonight flex gap-6"
-          ><a target="_blank" href="https://lewoof.xyz">Vithushan (ACuteWoof)</a
-          ><a target="_blank" href="https://github.com/woof-os">Github</a></span
+        <a href="/" class="!text-pink">Home</a>
+        <span class="text-yellow/50">·</span>
+        <a href="qtile">Qtile</a>
+        <a href="sway">Sway</a>
+        <span class="text-yellow/50">·</span>
+        <a href="pacman">Pacman Repository</a>
+        <span class="text-yellow/50">·</span>
+        <a class="!text-red-400 !hover:bg-red-500" href="important"
+          >Important Note</a
         >
-      </div>
-    </footer>
+      </nav>
+      <section id="content" class="w-full">
+        <div class="prose prose-tokyonight prose-invert !max-w-full">
+          <p>
+            Woof OS is a simple respin of Arch Linux with a focus on simplicity
+            and speed. The main focus was to recreate my personal setup (only
+            applies to the Qtile edition) in a way that is easy for install and
+            get up and running quickly. The distro is designed to be a daily
+            driver for those who want a system close to Arch Linux without the
+            hassle of setting up everything from scratch.
+          </p>
+          <p>
+            The configuration files and any packages outside the Arch Linux
+            repositories used in Woof OS are also available to install through
+            our pacman repository. You can find the repository information on
+            the
+            <a target="_self" href="pacman">Pacman Repository</a> page.
+          </p>
+          <h2>Editions</h2>
+          <ul>
+            <li><a href="qtile">Qtile</a></li>
+            <li><a href="sway">Sway</a></li>
+          </ul>
+          <p>
+            Woof OS' development is fueled by your contributions. Special thanks
+            to
+            <a target="_blank" href="https://github.com/perseus01"
+              >Perseus (yes he's a god)</a
+            >
+            for his fabulous monetary contributions.
+          </p>
+          <p>
+            Woof OS Sway edition is now available thanks to
+            <a target="_blank" href="https://github.com/akirapearl"
+              >Akirapearl</a
+            >.
+          </p>
+          <p>
+            If you would like to contribute to the project for me to release
+            more editions, you can
+            <a target="_self" href="#contact">get in touch with me</a>, or
+            <a target="_self" href="#donate">donate</a> to the project
+            (information at the bottom of the page).
+          </p>
+          <img alt="Woof OS" src="images/main.png" />
+        </div>
+      </section>
+      <footer id="footer" class="border-t border-periwinkle-200">
+        <div
+          class="text-wrap break-all prose prose-tokyonight w-screen md:grid md:grid-cols-2 !max-w-full"
+        >
+          <section id="contact">
+            <h2>Contact</h2>
+            <ul>
+              <li>
+                Email:&nbsp;<a
+                  target="_blank"
+                  href="mailto:sutharshanvithushan@gmail.com"
+                  >sutharshanvithushan@gmail.com</a
+                >
+              </li>
+              <li>
+                Discord:&nbsp;<a
+                  target="_blank"
+                  href="https://discord.gg/2G2yGUAXUS"
+                  >Woof OS</a
+                >
+              </li>
+            </ul>
+            <div class="flex flex-col gap-2">
+              <textarea
+                maxlength="2000"
+                class="flex min-h-[60px] w-full border border-mirage-800 bg-transparent px-3 py-2 text-base shadow-sm placeholder:text-mirage-500 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-mirage-500 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+                id="themessage"
+                placeholder="Leave a message"
+              ></textarea>
+              <button
+                class="border border-mirage-800 inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-transparent text-neutral-800-foreground shadow hover:bg-mirage-800/90 h-9 px-4 py-2"
+                id="sendbutton"
+                onclick="sendmessage()"
+              >
+                Send :&gt;
+              </button>
+            </div>
+          </section>
+          <section id="donate">
+            <h2>Donate</h2>
+            <ul>
+              <li>
+                <strong>Solana: </strong
+                ><span class="text-wrap break-all"
+                  >JDkK2kpBmPm6YyYnLYNHpw8FhKyZ9AQ2CQTqj6BQxFKY</span
+                >
+              </li>
+              <li>
+                <strong>BuyMeACoffee: </strong
+                ><a target="_blank" href="https://buymeacoffee.com/acutewoof"
+                  >acutewoof</a
+                >
+              </li>
+            </ul>
+          </section>
+        </div>
+        <div
+          class="mt-6 md:flex md:items-center md:justify-between text-periwinkle-200"
+        >
+          <span class="sm:text-center"
+            >© 2023-2025 Vithushan. All Rights Reserved.</span
+          ><span class="prose prose-tokyonight flex gap-6"
+            ><a target="_blank" href="https://lewoof.xyz"
+              >Vithushan (ACuteWoof)</a
+            ><a target="_blank" href="https://github.com/woof-os"
+              >Github</a
+            ></span
+          >
+        </div>
+      </footer>
+    </main>
   </body>
 </html>

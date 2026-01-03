@@ -3,6 +3,12 @@ module.exports = {
   content: ["*.html", "./**/*.html"],
   theme: {
     extend: {
+      backgroundImage: {
+        main: 'url("https://raw.githubusercontent.com/woof-os/wallpapers/main/drawn/woof.png")',
+      },
+	    backgroundSize: {
+		    main: 'cover',
+	    },
       colors: {
         black: "#414868",
         white: "#a9b1d6",
