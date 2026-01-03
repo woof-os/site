@@ -6,9 +6,9 @@ module.exports = {
       backgroundImage: {
         main: 'url("https://raw.githubusercontent.com/woof-os/wallpapers/main/drawn/woof.png")',
       },
-	    backgroundSize: {
-		    main: 'cover',
-	    },
+      backgroundSize: {
+        main: "cover",
+      },
       colors: {
         black: "#414868",
         white: "#a9b1d6",
