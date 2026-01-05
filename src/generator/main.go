@@ -41,7 +41,7 @@ func getFormattedSize(size int) (formatted string) {
 func getListItems(items []RepoItem) string {
 	var listItems string
 	for _, item := range items {
-		listItem := fmt.Sprintf("<div class='flex justify-between items-center w-full gap-8'><span>%s</span><span class='flex gap-4'><span>%s</span><a href='%s'>Github</a><a href='%s'>Download</a></span></div>", item.Name, item.HtmlUrl, item.DownloadUrl, getFormattedSize(item.Size))
+		listItem := fmt.Sprintf("<div class='flex justify-between items-center w-full gap-8'><span>%s</span><span class='flex gap-4'><span>%s</span><a href='%s'>Github</a><a href='%s'>Download</a></span></div>", item.Name, getFormattedSize(item.Size), item.HtmlUrl, item.DownloadUrl)
 		listItems = listItems + "\n" + listItem
 	}
 	return listItems
