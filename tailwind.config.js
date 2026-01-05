@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        main: 'url("https://raw.githubusercontent.com/woof-os/wallpapers/main/drawn/woof.png")',
+        // main: 'url("https://raw.githubusercontent.com/woof-os/wallpapers/main/drawn/woof.png")',
+        main: 'url("https://lewoof.xyz/api/background")',
       },
       backgroundSize: {
         main: "cover",
