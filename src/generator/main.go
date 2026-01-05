@@ -26,11 +26,11 @@ func getFormattedSize(size int) (formatted string) {
 		if kb < 1024 {
 			formatted = fmt.Sprintf("%d KiB", kb)
 		} else {
-			mb := size / 1024
+			mb := kb / 1024
 			if mb < 1024 {
 				formatted = fmt.Sprintf("%d MiB", mb)
 			} else {
-				gb := size / 1024
+				gb := mb / 1024
 				formatted = fmt.Sprintf("%d GiB", gb)
 			}
 		}
