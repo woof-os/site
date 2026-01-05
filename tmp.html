@@ -6,7 +6,7 @@
     <meta name="description" content="Pacman repository for Woof OS." />
     <meta name="author" content="Vithushan Sutharsan (ACuteWoof)" />
     <link rel="icon" type="image/png" href="https://github.com/woof-os.png" />
-    <title>Woof OS Pacman Repository</title>
+    <title>Browsing Woof OS Pacman Repository</title>
 
     <!--<link rel="stylesheet" href="tailwind.css" />-->
     <link rel="stylesheet" href="./tailwind.css" />
@@ -58,9 +58,9 @@
         class="w-full flex flex-col items-center justify-center"
       >
         <h1 class="text-center font-display text-5xl lg:text-7xl text-yellow">
-          Woof os 
-	  <br />
-	  <span class="text-3xl lg:text-5xl">pacman repository</span>
+          Woof os
+          <br />
+          <span class="text-3xl lg:text-5xl">pacman repository</span>
         </h1>
       </section>
       <nav
@@ -80,21 +80,39 @@
       <section id="content" class="w-full">
         <div class="prose prose-tokyonight prose-invert !max-w-full">
           <article>
-            <div>
-              <p>
-                This pacman repository is used to distribute packages needed for
-                Woof OS, including configuration files, that are not available
-                in the Arch Linux repositories.
-              </p>
-              <p>
-                To use the repository, add the following to your
-                <code>/etc/pacman.conf</code>:
-              </p>
-              <pre>[woof-pacman-repo]<br>SigLevel = Optional TrustAll<br>Server = https://repo.os.lewoof.xyz/$arch<br>Server = https://woof-os.github.io/$repo/$arch</pre>
-              <a target="_blank" href="/packages"
-                >Browse the repository</a
-              >
-            </div>
+            <h3>x86_64</h3>
+            <ul class="w-full">
+              <li class="flex justify-between gap-8 w-full">
+                <span>ast-grep</span
+                ><span class="flex gap-4"
+                  ><a href="https://github.com/ast-grep/ast-grep">Github</a
+                  ><a
+                    href="https://github.com/ast-grep/ast-grep/releases/download/0.40.4/app-x86_64-unknown-linux-gnu.zip"
+                    >Download</a
+                  ><span>0</span></span
+                >
+              </li>
+              <li class="flex flex-between gap-8">
+                <span>clang-format</span
+                ><span class="flex gap-4"
+                  ><a href="https://github.com/clangd/clangd">Github</a
+                  ><a
+                    href="https://github.com/clangd/clangd/releases/download/21.1.8/clangd-linux-21.1.8.zip"
+                    >Download</a
+                  ><span>0</span></span
+                >
+              </li>
+              <li class="flex flex-between gap-8">
+                <span>clangd</span
+                ><span class="flex gap-4"
+                  ><a href="https://github.com/clangd/clangd">Github</a
+                  ><a
+                    href="https://github.com/clangd/clangd/releases/download/21.1.8/clangd-linux-21.1.8.zip"
+                    >Download</a
+                  ><span>0</span></span
+                >
+              </li>
+            </ul>
           </article>
         </div>
       </section>
@@ -170,4 +188,5 @@
       </footer>
     </main>
   </body>
+  <
 </html>
