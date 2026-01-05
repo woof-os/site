@@ -13,25 +13,25 @@ import (
 type RepoItem struct {
 	Name        string `json:"name"`
 	Path        string `json:"path"`
-	Size        int    `json:"size"`
+	Size        float64 `json:"size"`
 	HtmlUrl     string `json:"html_url"`
 	DownloadUrl string `json:"download_url"`
 }
 
-func getFormattedSize(size int) (formatted string) {
+func getFormattedSize(size float64) (formatted string) {
 	if size < 1024 {
-		formatted = fmt.Sprintf("%d B", size)
+		formatted = fmt.Sprintf("%f B", size)
 	} else {
 		kb := size / 1024
 		if kb < 1024 {
-			formatted = fmt.Sprintf("%d KiB", kb)
+			formatted = fmt.Sprintf("%f KiB", kb)
 		} else {
 			mb := kb / 1024
 			if mb < 1024 {
-				formatted = fmt.Sprintf("%d MiB", mb)
+				formatted = fmt.Sprintf("%f MiB", mb)
 			} else {
 				gb := mb / 1024
-				formatted = fmt.Sprintf("%d GiB", gb)
+				formatted = fmt.Sprintf("%f GiB", gb)
 			}
 		}
 	}
