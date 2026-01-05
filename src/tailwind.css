@@ -7,7 +7,7 @@ kbd {
   font-family: monospace !important;
 }
 a {
-  @apply font-mono leading-none underline-offset-2 transition-colors duration-150 ease-in-out;
+  @apply leading-none underline-offset-2 transition-colors duration-150 ease-in-out;
 }
 a:hover {
   @apply bg-green text-mirage-950 decoration-mirage-950 italic;
