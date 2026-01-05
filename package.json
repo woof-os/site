@@ -6,7 +6,7 @@
   "author": "Vithushan <sutharshanvithushan@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "./src/generator/main > packages.html && tailwindcss build -i ./src/tailwind.css -o ./tailwind.css",
+    "dev": "./scripts/build.sh",
     "build": "NODE_ENV=production yarn dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
