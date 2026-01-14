@@ -49,7 +49,9 @@
       }
     </script>
   </head>
-  <body class="bg-mirage-900 bg-main bg-fixed bg-center md:p-8 lg:p-12 xl:px-32">
+  <body
+    class="bg-mirage-900 bg-main bg-fixed bg-center md:p-8 lg:p-12 xl:px-32"
+  >
     <main
       class="text-wrap flex flex-col gap-16 dark bg-mirage-950/90 backdrop-blur-sm backdrop-brightness-50 text-periwinkle-200 font-serif w-full max-w-screen-md mx-auto px-8 py-12"
     >
@@ -118,9 +120,11 @@
                 <p>
                   Woof OS Sway edition uses a tiling window manager, sway,
                   mainly controlled using the keyboard.<br />
-                  The keybinds listed here are declared in
-                  <code>~/.config/sway/config</code>. Also note that the
-                  <kbd>Caps Lock</kbd> key is swapped with <kbd>Escape</kbd>
+                  System-wide remaps listed here are declared in
+                  <code>/etc/keyd/default.conf</code>. The other keybinds listed
+                  are declared in <code>~/.config/sway/config</code>. Also note
+                  that the <kbd>Caps Lock</kbd> key is swapped with
+                  <kbd>Escape</kbd>
                   because no one uses Caps Lock, and Escape is more useful for
                   the intended workflow in Woof OS.
                 </p>
@@ -130,6 +134,17 @@
                 key, which is the <kbd>⊞ Win</kbd> key on most keyboards, and
                 the <kbd>⌘ Command</kbd> key on Macs.
                 <div class="md:grid md:grid-cols-2 md:gap-12 mt-8">
+                  <div>
+                    <h2>System-wide remaps</h2>
+                    <ul>
+                      <li>
+                        <kbd>alt</kbd> <kbd>h</kbd> acts as <kbd>left</kbd>
+                        <kbd>alt</kbd> <kbd>l</kbd> acts as <kbd>right</kbd>
+                        <kbd>alt</kbd> <kbd>j</kbd> acts as <kbd>down</kbd>
+                        <kbd>alt</kbd> <kbd>k</kbd> acts as <kbd>up</kbd>
+                      </li>
+                    </ul>
+                  </div>
                   <div>
                     <h2>Focus navigation</h2>
                     <ul>
