@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         // main: 'url("https://raw.githubusercontent.com/woof-os/wallpapers/main/drawn/woof.png")',
-        main: 'url("https://lewoof.xyz/assets/images/background.png")',
+        main: 'url("https://lewoof.xyz/assets/images/background.jpg")',
       },
       backgroundSize: {
         main: "cover",
