@@ -108,8 +108,7 @@ For more info on Arch Linux which WoofOS is built on, check out the ArchWiki:
 
 ### Contact for WoofOS
 
-- Email: sutharshanvithushan@gmail.com
-- Discord: [Woof OS](https://discord.gg/2G2yGUAXUS)
+- Email: woof@lewoof.xyz
 
 ### Donate
 
