@@ -3,6 +3,26 @@
 @tailwind components;
 @tailwind variants;
 
+@font-face {
+  font-family: "B612";
+  font-display: swap;
+  src: url(https://lewoof.xyz/assets/fonts/B612/B612-Regular.ttf);
+}
+
+@font-face {
+  font-family: "B612 Mono";
+  font-style: italic;
+  font-display: swap;
+  src: url(https://lewoof.xyz/assets/fonts/B612_Mono/B612Mono-Italic.ttf);
+}
+
+@font-face {
+  font-family: "B612 Mono";
+  font-display: swap;
+  src: url(https://lewoof.xyz/assets/fonts/B612_Mono/B612Mono-Regular.ttf);
+}
+
+
 kbd {
   font-family: monospace !important;
 }

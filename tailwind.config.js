@@ -67,8 +67,8 @@ module.exports = {
       }),
     },
     fontFamily: {
-      serif: ["EB Garamond", "ui-serif", "Georgia", "serif"],
-      mono: ["IBM Plex Mono", "ui-monospace", "SFMono-Regular"],
+      serif: ["B612", "ui-serif", "Georgia", "serif"],
+      mono: ["B612 Mono", "ui-monospace", "SFMono-Regular"],
       display: ["Modern Antiqua", "serif"],
     },
   },
