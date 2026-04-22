@@ -112,5 +112,5 @@ For more info on Arch Linux which WoofOS is built on, check out the ArchWiki:
 
 ### Donate
 
-- Solana: JDkK2kpBmPm6YyYnLYNHpw8FhKyZ9AQ2CQTqj6BQxFKY
+- Solana: GHHPYZDDyXmwPLnQPEBgXAD9FzZmDPhCbVRpgqxuEpQ3
 - BuyMeACoffee: [acutewoof](https://buymeacoffee.com/acutewoof)
